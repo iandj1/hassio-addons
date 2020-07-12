@@ -1,6 +1,6 @@
 {
   "name": "Duck DNS serveo",
-  "version": "1.0.0.1",
+  "version": "1.0.0.2",
   "slug": "duck",
   "description": "(Modified) Free Dynamic DNS (DynDNS or DDNS) service with Let's Encrypt support. For serveo",
   "url": "https://github.com/iandj1/hassio-addons/tree/master/duck",
