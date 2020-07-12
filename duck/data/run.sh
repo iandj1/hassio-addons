@@ -7,7 +7,7 @@ WORK_DIR=/data/workdir
 LE_UPDATE="0"
 
 # DuckDNS
-IPV4=$(bashio::config 'ipv4 // empty')
+IPV4=$(bashio::config 'ipv4')
 IPV6=$(bashio::config 'ipv6 // empty')
 TXT=$(bashio::config 'txt')
 TOKEN=$(bashio::config 'token')
