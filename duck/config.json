@@ -27,7 +27,7 @@
     },
     "ipv4": "str?",
     "ipv6": "str?",
-    "txt": "txt?",
+    "txt": "str?",
     "token": "str",
     "domains": ["str"],
     "aliases": [
