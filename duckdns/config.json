@@ -1,9 +1,9 @@
 {
   "name": "Duck DNS",
-  "version": "1.12.2",
+  "version": "1.12.1",
   "slug": "duckdns",
-  "description": "Free Dynamic DNS (DynDNS or DDNS) service with Let's Encrypt support",
-  "url": "https://github.com/home-assistant/hassio-addons/tree/master/duckdns",
+  "description": "Edited Free Dynamic DNS (DynDNS or DDNS) service with Let's Encrypt support",
+  "url": "https://github.com/iandj1/hassio-addons/tree/master/duckdns",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "services",
   "boot": "auto",
@@ -17,8 +17,7 @@
     "token": null,
     "domains": [null],
     "aliases": [],
-    "seconds": 300,
-    "ipv4": null
+    "seconds": 300
   },
   "schema": {
     "lets_encrypt": {
