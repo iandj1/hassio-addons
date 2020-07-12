@@ -63,15 +63,15 @@ while true; do
         bashio::log.warning "${answer}"
     fi
     
+    now="$(date +%s)"
+    if bashio::config.true 'lets_encrypt.accept_terms' && [ $((now - LE_UPDATE)) -ge 43200 ]; then
+        le_renew
+    fi
+    
     if answer="$(curl -s "https://www.duckdns.org/update?domains=${DOMAINS}&token=${TOKEN}&txt=${TXT}&verbose=true")"; then
         bashio::log.info "${answer}"
     else
         bashio::log.warning "${answer}"
-    fi
-    
-    now="$(date +%s)"
-    if bashio::config.true 'lets_encrypt.accept_terms' && [ $((now - LE_UPDATE)) -ge 43200 ]; then
-        le_renew
     fi
     
     sleep "${WAIT_TIME}"
