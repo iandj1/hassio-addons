@@ -18,6 +18,7 @@
     "domains": [null],
     "aliases": [],
     "seconds": 300
+    "ipv4": null
   },
   "schema": {
     "lets_encrypt": {
