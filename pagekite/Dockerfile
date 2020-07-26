@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 RUN apk add python2 \
-  && curl -s -o src/pagekite/py "https://pagekite.net/pk/pagekite.py"
+  && curl -s -o src/pagekite.py "https://pagekite.net/pk/pagekite.py"
 
 COPY src/* /src/
 
