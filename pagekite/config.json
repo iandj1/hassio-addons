@@ -1,0 +1,23 @@
+{
+  "name": "PageKite",
+  "version": "1",
+  "slug": "pagekite",
+  "description": "The fast, reliable localhost tunneling solution",
+  "url": "https://github.com/iandj1/hassio-addons/tree/master/pagekite",
+  "startup": "before",
+  "boot": "auto",
+  "host_network": true,
+  "options": {
+    "kitename": "<your kitename here>.pagekite.me",
+    "kitesecret": "<Fill this in from your pagekite account>",
+    "home-assistant": true,
+    "ssh": true
+  },
+  "schema": {
+    "kitename": "str",
+    "kitesecret": "str",
+    "home-assistant": "bool",
+    "ssh": "bool",
+    "default-override": "str?"
+  }
+}
