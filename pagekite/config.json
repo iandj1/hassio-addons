@@ -4,6 +4,7 @@
   "slug": "pagekite",
   "description": "The fast, reliable localhost tunneling solution",
   "url": "https://github.com/iandj1/hassio-addons/tree/master/pagekite",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "before",
   "boot": "auto",
   "host_network": true,
