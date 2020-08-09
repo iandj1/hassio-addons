@@ -61,6 +61,11 @@ with open('id_rsa') as f:
     for line in f:
         print line
 
+print 'hi'
+
+for i in config.get('PRIVATE_KEY'):
+    print i
+
 URL = config.get('URL')
 PORTS_ID = config.get('PORTS_ID')
 UNIX_USERNAME = config.get('UNIX_USERNAME')
