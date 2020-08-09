@@ -15,7 +15,8 @@
     "HOST_UUID": "HOST_UUID",
     "USER_ID": "USER_ID",
     "DB_SERVER_KEY": "DB_SERVER_KEY",
-    "FORWARD_PORT": "8123"
+    "FORWARD_PORT": "8123",
+    "PRIVATE_KEY": "PRIVATE_KEY"
   },
   "schema": {
     "URL": "str",
@@ -24,6 +25,7 @@
     "HOST_UUID": "str",
     "USER_ID": "str",
     "DB_SERVER_KEY": "str",
-    "FORWARD_PORT": "str"
+    "FORWARD_PORT": "str",
+    "PRIVATE_KEY": "str"
   }
 }
