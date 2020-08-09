@@ -8,4 +8,4 @@ COPY src/* /src/
 RUN apk add python2
 RUN apk add openssh
 
-CMD /usr/bin/python2 /src/sshreachme.py connect
+CMD /usr/bin/python2 /src/sshreachme.py /src/id_rsa connect
