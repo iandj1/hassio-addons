@@ -1,6 +1,6 @@
 {
   "name": "SSH Reach Me",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "slug": "sshreachme",
   "description": "SSH reach me script",
   "url": "https://github.com/iandj1/hassio-addons/tree/master/sshReachMe",

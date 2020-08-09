@@ -57,14 +57,7 @@ except Exception as e:
 config = json.load(open("/data/options.json"))
 with open('id_rsa','w') as f:
     f.write(config.get('PRIVATE_KEY'))
-with open('id_rsa') as f:
-    for line in f:
-        print line
-
-print 'hi'
-
-for i in config.get('PRIVATE_KEY'):
-    print i
+    f.write("\n")
 
 URL = config.get('URL')
 PORTS_ID = config.get('PORTS_ID')
