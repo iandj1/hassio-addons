@@ -1,0 +1,29 @@
+{
+  "name": "SSH Reach Me",
+  "version": "1",
+  "slug": "sshreachme",
+  "description": "SSH reach me script",
+  "url": "https://github.com/iandj1/hassio-addons/tree/master/sshReachMe",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "before",
+  "boot": "auto",
+  "host_network": true,
+  "options": {
+    "URL": "URL",
+    "PORTS_ID": "PORTS_ID",
+    "UNIX_USERNAME": "UNIX_USERNAME",
+    "HOST_UUID": "HOST_UUID",
+    "USER_ID": "USER_ID",
+    "DB_SERVER_KEY": "DB_SERVER_KEY",
+    "FORWARD_PORT": "8123"
+  },
+  "schema": {
+    "URL": "str",
+    "PORTS_ID": "str",
+    "UNIX_USERNAME": "str",
+    "HOST_UUID": "str",
+    "USER_ID": "str",
+    "DB_SERVER_KEY": "str",
+    "FORWARD_PORT": "str"
+  }
+}
