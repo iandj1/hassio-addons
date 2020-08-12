@@ -7,7 +7,7 @@ WORK_DIR=/data/workdir
 LE_UPDATE="0"
 
 # DuckDNS
-IPV4=$(bashio::config 'ipv4')
+DOMAINTOCOPY=$(bashio::config 'domain_to_copy')
 IPV6=$(bashio::config 'ipv6 // empty')
 TXT=$(bashio::config 'txt')
 TOKEN=$(bashio::config 'token')
@@ -54,7 +54,8 @@ fi
 # Run duckdns
 while true; do
 
-    [[ ${IPV4} != *:/* ]] && ipv4=${IPV4} || ipv4=$(curl -s -m 10 "${IPV4}")
+    #[[ ${IPV4} != *:/* ]] && ipv4=${IPV4} || ipv4=$(curl -s -m 10 "${IPV4}")
+    IPV4="$(getent ahostsv4 $DOMAINTOCOPY | awk '{ print $1; exit }')"
     [[ ${IPV6} != *:/* ]] && ipv6=${IPV6} || ipv6=$(curl -s -m 10 "${IPV6}")
 
     if answer="$(curl -s "https://www.duckdns.org/update?domains=${DOMAINS}&token=${TOKEN}&ip=${IPV4}&verbose=true")"; then
@@ -68,11 +69,11 @@ while true; do
         le_renew
     fi
     
-    if answer="$(curl -s "https://www.duckdns.org/update?domains=${DOMAINS}&token=${TOKEN}&txt=${TXT}&verbose=true")"; then
-        bashio::log.info "${answer}"
-    else
-        bashio::log.warning "${answer}"
-    fi
+    #if answer="$(curl -s "https://www.duckdns.org/update?domains=${DOMAINS}&token=${TOKEN}&txt=${TXT}&verbose=true")"; then
+    #    bashio::log.info "${answer}"
+    #else
+    #    bashio::log.warning "${answer}"
+    #fi
     
     sleep "${WAIT_TIME}"
 done
