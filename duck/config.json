@@ -1,8 +1,8 @@
 {
-  "name": "Duck DNS serveo",
-  "version": "1.0.0.2",
+  "name": "Duck DNS",
+  "version": "1.0.0.3",
   "slug": "duck",
-  "description": "(Modified) Free Dynamic DNS (DynDNS or DDNS) service with Let's Encrypt support. For serveo",
+  "description": "(Modified) Free Dynamic DNS (DynDNS or DDNS) service with Let's Encrypt support. Setup to copy IP of supplied domain",
   "url": "https://github.com/iandj1/hassio-addons/tree/master/duck",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "services",
@@ -25,7 +25,7 @@
       "certfile": "str",
       "keyfile": "str"
     },
-    "ipv4": "str?",
+    "domain_to_copy": "str",
     "ipv6": "str?",
     "txt": "str?",
     "token": "str",
